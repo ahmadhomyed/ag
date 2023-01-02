@@ -1,0 +1,97 @@
+/*navbar*/ 
+//start navbar
+.navbar{
+	padding-top: 0 !important;
+	padding-bottom: 0!important;
+	background-color:transparent!important;
+	.navbar-nav{
+		padding: 5px;
+		.nav-item{
+			padding-bottom: 5px!important;
+
+		}
+	}
+	&.scrolled{
+		background-color:$textColor!important;
+		.nav-item{
+			a{
+				color: $bg-color2!important;
+			}
+		}
+		.navbar-toggler-icon{
+			background-color: $textColor;
+		}
+		.contact{
+			
+			a{
+				color: $bg-color2;
+				border: 1px solid $bg-color2;
+			}
+		    }
+		}
+	.navbar-toggler{
+		margin-left: auto;
+		margin-right: 0;
+		background-color: #fff;
+		@include opacity(.7);
+		padding: 1px 2px;
+	}
+	.contact{
+		@media (max-width: 992px ) {
+			display:none!important;
+		}
+	}
+	.navbar-brand{
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+		margin-top: 6px;
+	}
+	.nav-item{
+		margin-top: 3px;
+		a{
+			color: $textColor!important;
+			@include opacity(.7);
+			padding-top: 0 !important;
+			padding-bottom: 0!important;
+			@include prefix(transition,.5s, webkit moz o ms);
+			&:hover{
+				color: $mainColor!important;
+				@include opacity(1);
+				
+			}
+			font-weight: 600;
+		}
+		
+		&.active a{
+			color: $mainColor!important;
+			@include opacity(1);
+		}
+	}
+	.contact{
+		margin-right: 50px;
+			ul{
+				margin-top: 0!important;
+				margin-bottom: 0!important;
+				li{
+					margin-left: 15px;
+					a{
+						border: 1px solid $textColor;
+						@include prefix(border-radius,4px, webkit moz o ms);
+						display: inline-block;
+						width: 30px;
+						height: 30px;
+						font-size: 15px;
+						line-height: 30px;
+						color: $textColor;
+						line-height: 30px;
+						@include prefix(transition,.5s, webkit moz o ms);
+						&:hover{
+							background-color: $mainColor;
+							border: 1px solid $mainColor;
+						}
+					}
+					
+				}
+			}
+		}
+} 

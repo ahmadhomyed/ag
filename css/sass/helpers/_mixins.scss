@@ -1,0 +1,39 @@
+// $prefix @each slice 1 prefix from prefixes
+@mixin prefix($property, $value, $prefixes: ()) {
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}: $value;
+    }
+
+    // Output standard non-prefixed declaration
+    #{$property}: $value;
+    }
+    // keyframes mixin
+    @mixin keyframes($name) {
+        @-webkit-keyframes #{$name} {
+        @content; 
+        }
+        @-moz-keyframes #{$name} {
+        @content;
+        }
+        @-ms-keyframes #{$name} {
+        @content;
+        }
+        @keyframes #{$name} {
+        @content;
+        
+        } 
+    }
+// When using ::before and ::after
+    @mixin pseudo($display: block, $pos: absolute, $content: ''){
+        content: $content;
+        display: $display;
+        position: $pos;
+    }
+    
+    
+// opacity
+    @mixin opacity($opacity) {
+        opacity: $opacity;
+        $opacity-ie: $opacity * 100;
+        filter: alpha(opacity = $opacity-ie); //IE8
+      }

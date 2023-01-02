@@ -1,0 +1,79 @@
+// testimonials
+/*start testimonials*/
+.testimonials{
+	.swiper-container {
+		background-color: $bg-color3;
+		width: 100%;
+		padding-top: 30px;
+		padding-bottom: 20px;
+		.swiper-slide{
+			width: 300px;
+			height: 320px;
+			background-color: $textColor;
+			p{
+				font-weight: 400;
+				i{
+					color: $mainColor !important;
+				}
+			}
+			li{
+				display: inline-block;
+				color: $mainColor;
+			}
+			.div-img{
+				margin: auto;
+				img{
+					width: 70px;
+					height: 70px;
+					border: 2px solid $bg-color3;
+				}
+				h4{
+					font-family: $font1;
+				}
+			}
+		}
+	}
+	.swiper-pagination{
+		position: static;
+		span{
+			margin-right: 5px;
+		}
+		.swiper-pagination-bullet-active{
+			background-color: $mainColor;
+		}
+	}
+}
+/*Start Blog*/ 
+// blog
+
+.blog{
+	
+	.card{
+		width: 21rem!important;
+		margin: auto;
+		margin-bottom: 5px;
+	}
+	.card-body{
+		.btn{
+			background-color: $mainColor;
+			cursor: pointer;
+			@include prefix (transition ,.5s,webkit moz o ms);
+			a{
+				color:$textColor;
+				padding: 10px 10px;
+			}
+			i{
+				@include prefix (transition ,.5s,webkit moz o ms);
+			}
+			&:hover{
+				background-color: $bg-color2;
+				i{
+					color: $mainColor;
+					@include prefix (transform ,translateX(7px),webkit moz o ms);
+				}
+			}
+			
+		}
+		
+	}
+}

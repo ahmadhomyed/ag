@@ -1,0 +1,40 @@
+
+/*Start Skills*/ 
+// start skills
+
+.skills{
+	.progress-box{
+		h6{
+			font-weight: bold;
+			text-indent: 2px;
+		}
+		.progress{
+			height: 8px;
+			overflow: visible;
+			border: 1px solid $bg-color3;
+			background-color: $textColor;
+			.progress-bar{
+				background-color: $mainColor;
+				height: 3px;
+				border-radius: 4px;
+				margin: auto 2px;
+				&:after{
+					content: "";
+					position: absolute;
+					right: -6px;
+					top: -3px;
+					border: 2px solid $mainColor;
+					height: 8px;
+					width: 8px;
+					@include prefix (border-radius ,50%,webkit moz o ms);
+				}
+			}
+			.progress-val{
+				top: -24px;
+				padding: 3px;
+				right: 31px;
+				font-size: 15px;
+			}
+		}
+	}
+}

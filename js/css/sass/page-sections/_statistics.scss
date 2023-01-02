@@ -1,0 +1,53 @@
+
+/*start statistics*/ 
+// start statistics
+.statistics{
+	background-image: url("../img/statictis.jpg"); 
+	background-size: cover;
+	background-attachment: fixed;
+	.overlay{
+	@extend %overlay;
+	}
+	.item-statistics{
+		opacity: .7;
+		@include prefix (transition ,.5s,webkit moz o ms);
+		i{
+			font-size: 40px;
+			color: $textColor;
+		}
+		span{
+			color: $mainColor;
+			font-size: 30px;
+		}
+		h5{
+			color: $textColor;
+		}
+		&:hover{
+			opacity: 1;
+			@include prefix (transform ,scale(1.1),webkit moz o ms);
+		}
+	}
+}
+
+// start advertise
+.advertise{
+	background-image: -webkit-linear-gradient(-114deg, $bg-color3 0%, $mainColor 100%);
+	padding: 80px 20px;
+	h2{
+		color: $textColor;
+
+	}
+	.btn{
+		background-color: $mainColor;
+		cursor: pointer;
+		@include prefix (transition ,.5s,webkit moz o ms);
+		a{
+			color:$textColor;
+			padding: 10px 20px;
+		}
+		&:hover{
+			background-color: $bg-color2;
+		}
+	}
+
+}

@@ -1,0 +1,53 @@
+/*Start About Me*/ 
+// start about me
+.about-me{
+	background-color: $bg-color3;
+	.my-img{
+		img{
+			position: relative;
+			max-width: 100%;
+			max-height: 70%;
+		}
+		&::before{
+			position: absolute;
+			content: "";
+			top: 91px;
+			right: 10%;
+			left: 0%;
+			bottom: 0%;
+			border-width: 16px;
+			border-style: solid;
+			border-color: $mainColor;
+			@include prefix(border-image ,initial, webkit moz o ms);
+			display: block;
+		}
+	}
+	.details{
+		h2{
+			color: $mainColor;
+			letter-spacing: 2px;
+			font-weight:bolder;
+		}
+		h4{
+			span{
+				color: $mainColor;
+			}
+		}
+		.deatail{
+			ul{
+				margin-top: 5px;
+				li{
+					span:first-of-type{
+						min-width: 110px;
+						display: inline-block;
+						margin: 5px 0;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+		.btn{
+			@extend %btn;
+		}
+	}
+}

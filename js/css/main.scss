@@ -1,0 +1,38 @@
+
+/*  Template Name: Dr Ahmad Gaber - Personal Portfolio Template
+	Author: Ahmad Gaber
+	Version:        1.0
+    Copyright: 2019
+
+--------------------------------------------------
+
+Table of Content
+
+	1.  Body and Core Css
+	2.  mixins ,variables , pseudoClasses
+	3.  Home Section
+	4.  About Section
+	5.  skills Section
+	6.  services section
+	7.  statistics Section
+	8.  projects section	
+	9.  price section
+	10. testimonials section
+	11. contact me section 
+
+----------------------------------- */
+@import "sass/helpers/mixins";      // mixins functions
+@import "sass/helpers/variables";   // variables 
+@import "sass/helpers/pseudoClass"; //pseudoClasses
+@import "sass/page-sections/general";     //general layout prop +loading
+@import "sass/page-sections/navbar";      //navbar section
+@import "sass/page-sections/homePage";    //homePage section
+@import "sass/page-sections/AboutMe";     //aboutMe section
+@import "sass/page-sections/skills";      //skills section
+@import "sass/page-sections/services";    //services section
+@import "sass/page-sections/statistics"; //statistics section + advertise section
+@import "sass/page-sections/projects";   // projects section
+@import "sass/page-sections/price";      // price section
+@import "sass/page-sections/testimonials";// testimonials section + blog section
+@import "sass/page-sections/contactMe";   // contact me + footer 
+

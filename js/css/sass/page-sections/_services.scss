@@ -1,0 +1,35 @@
+/* start services*/ 
+// start services
+.services{
+	background-color: $bg-color3;
+	.service{
+		background-color: #fff;
+		padding: 15px;
+		border: 1px solid #ccc;
+		@include prefix (transition ,.5s,webkit moz o ms);
+		position: relative;
+		z-index: 3;
+		@extend %border-effect;
+		&:hover{
+			@include prefix (transform ,translateY(-5px),webkit moz o ms);
+			box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.16);
+		}
+		i{
+			color:$mainColor;
+			font-size: 40px;
+			
+		}
+		&:hover i{
+			@include prefix (Animation ,up-down .5s ease-in-out alternate-reverse infinite,webkit moz o ms);
+		}
+		@keyframes up-down {
+			0%{
+				@include prefix (transform ,translateY(-7px),webkit moz o ms);
+			}
+			100%{
+				@include prefix (transform ,translateY(0px),webkit moz o ms);
+			}
+		}
+		
+	}
+}

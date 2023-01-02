@@ -1,0 +1,112 @@
+/*Start Home Page*/ 
+// start HomePage
+.home-page{
+	height: 100vh;
+	background-image: url("../img/home.jpg");
+	@include prefix (background-size,cover,webkit moz o ms);
+    
+	
+		.overlay{
+			@extend %overlay;
+		}
+		
+		.title{
+			top: 50%;
+			left: 50%;
+			@include prefix(transform ,translate(-50%,-50%), webkit moz o ms);
+			.title-heading{
+				h4{
+					color: $textColor;
+					letter-spacing: 5px;
+				}
+				h1{
+					font-size: 50px;
+					color: $mainColor;
+					font-weight: bold;
+				}
+			}
+			.title-paragraph{
+				p{
+					color: $textColor;
+					word-spacing: 3px;
+				}
+			}
+			.download{
+				a{
+					padding: 5px 10px;
+					@include prefix(transition,.5s, webkit moz o ms);
+					font-size: 20px;
+					color: $textColor;
+				}
+				a:first-of-type{
+					background-color: $mainColor;
+				}
+				a:last-of-type{
+					border: 1px solid $textColor;
+					&:hover{
+						background-color: $mainColor;
+						color: $textColor;
+						border: 1px solid $mainColor;
+					}
+				}
+			}
+		}
+	.arrow-down{
+		bottom: 25px;
+		left: 50%;
+		@include prefix(transform,translateX(-50%));
+		@media (max-width: 992px) { 
+			bottom: 50px;
+		 }
+		a{
+			@include prefix(transition,.5s, webkit moz o ms);
+			width: 25px;
+			color: #fff;
+			text-transform: uppercase;
+			text-decoration: none;
+			margin: 0 auto;
+			text-align: center;
+			font-size: 15px;
+			letter-spacing: 1.2px;
+			font-weight: 600;
+			display: inline-block;
+			span{
+				@include prefix (transition ,.5s,webkit moz o ms);
+			}
+			.one-down{
+				display: block;
+				background-color: $textColor;
+				width: 2px;
+				height: 0px;
+				margin: 0 12px;
+				margin-bottom: 5px;
+			}
+			.two-down{
+				@include prefix (transform ,rotate(180deg),webkit moz o ms);
+				@include prefix (writing-mode ,vertical-lr,webkit moz o ms);
+				color:$textColor;
+			}
+			.three-down{
+				display: block;
+				width: 2px;
+				height: 40px;
+				background-color: $textColor;
+				margin: 0 12px;
+			}
+		}
+		&:hover {
+			.one-down{
+				height: 40px;
+				background-color:  $mainColor;
+			}
+			.two-down{
+				color: $mainColor;
+			}
+			
+			.three-down{
+				height: 0;
+				background-color:  $mainColor;
+			}
+		}
+	}
+}

@@ -1,0 +1,94 @@
+/*Start Price*/ 
+
+// start price
+.price{
+	background-color: $bg-color3;
+	.box-price{
+        margin-top: 60px;
+        background-color: $textColor;
+        padding: 30px;
+        @include prefix(border-radius,10px, webkit moz o ms);
+        @include prefix(transition,all .3s ease-in-out, webkit moz o ms);
+        &:hover{
+            @include prefix(transform,translateY(-13px), webkit moz o ms);
+            @include prefix(box-shadow,4px 7px 18px 1px $bg-color2, webkit moz o ms);
+            .box-head i::after{
+                @include opacity (1);
+                border: 2px solid $mainColor;
+                @include prefix(transition,.5s, webkit moz o ms);
+			}
+            }
+        .box-head i{
+            @include prefix(transition,.5s, webkit moz o ms);
+            top: -40px;
+            left: 50%;
+            width: 70px;
+            height: 70px;
+            font-size: 30px;
+            line-height: 70px;
+            color: $bg-color2;
+            background-color: $bg-color3;
+            @include prefix(border-radius, 50% , webkit moz o ms);
+            @include prefix(transform,translateX(-50%), webkit moz o ms);
+            position: relative;
+            &::after{
+                @include pseudo ;
+                width: 60px;
+                height: 60px;
+                left: 50%;
+                top: 50%;
+                border-radius: 100%;
+                @include opacity(0);
+                border: 2px solid $bg-color;
+                @include prefix(transform,translate(-50%,-50%), webkit moz o ms);
+            }       
+            }
+            h4{
+                font-size: 20px;
+                padding-top: 25px;
+				padding-bottom: 25px;
+				color: $mainColor;
+				font-weight: bold;
+            }
+        &::after{
+            @include pseudo ;
+            width: 100%;
+            height: 4px;
+            left: 0;
+            background: $bg-color3;
+            top: 95px;
+        }
+        .box-body{
+			background-color: $textColor;
+			
+            .prices{
+                padding: 10px;
+                .dolar{top: -20px; font-size: 15px;}
+                .no{font-size: 40px; color: $mainColor;}
+                .period{ font-size: 14px; font-weight:bold;}
+            }
+            .services{
+				background-color: $textColor;
+                margin-top:20px;
+                ul {
+                    li{
+						padding-bottom: 7px;
+						font-size: 20px;
+						i{
+							font-size:16px;
+							margin-right: 5px;
+							color: $mainColor;
+						}
+                        &.line{
+                            text-decoration: line-through;
+                            @include opacity(.5);
+                        }
+                    } 
+                }
+                .btn{
+					@extend %btn;
+				}
+            }
+        }
+}
+}

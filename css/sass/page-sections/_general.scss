@@ -1,0 +1,68 @@
+body{
+	font-family: $font1;
+	box-sizing: border-box;
+	background-color: $bg-color3;
+	
+	
+}
+
+p{
+	font-family: $font2;
+
+}
+
+/*loading*/
+.loading{
+    top: 0;
+    left: 0;
+    background-color: $bg-color;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    span{
+        width: 50px;
+		height: 50px;
+		color: $textColor;
+        background-color: $bg-color;
+        margin: 0 20px;
+        @include prefix (animation, loader 2.5s linear infinite , webkit moz ms o);
+        line-height: 50px;
+        font-size:25px;
+    }
+    span:nth-child(1){animation-delay:0s;}
+    span:nth-child(2){animation-delay:0.2s;}
+    span:nth-child(3){animation-delay:0.4s;}
+    span:nth-child(4){animation-delay:0.6s;}
+    span:nth-child(5){animation-delay:0.8s;}
+    span:nth-child(6){animation-delay:1s;}
+    span:nth-child(7){animation-delay:1.2s;}
+    span:nth-child(8){animation-delay:1.4s;}
+    span:nth-child(9){animation-delay:1.6s;}
+}
+// loader animation
+/*loader animation*/ 
+@include keyframes (loader) {
+
+    0%{
+        box-shadow: 0 0 0 rgba(0,0,0,.5);
+        @include opacity (0);
+        @include prefix (transform,translateX(-50px) scale(1) ,webkit moz o);
+        }
+
+    50%{
+        box-shadow: 0 20px 50px rgba(0,0,0,.5);
+        @include opacity (1);
+        @include prefix (transform,translateX(0px) scale(1.2) ,webkit moz o);
+        }
+    100%{
+        box-shadow: 0 0 0 rgba(0,0,0,.5);
+        @include opacity (0);
+        @include prefix (transform,translateX(50px) scale(1) ,webkit moz o);
+        
+        }
+}
+// underline header
+.header{
+	
+	@extend %header;
+}
